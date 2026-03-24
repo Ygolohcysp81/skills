@@ -1,0 +1,229 @@
+# Instincts generated from https://github.com/Ygolohcysp81/skills
+# Generated: 2026-03-24T22:58:23.844Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: skills-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Commit Length
+
+## Action
+
+Keep commit messages concise (~41 characters)
+
+## Evidence
+
+- Average commit message length: 41 chars
+- Based on 200 commits
+
+---
+id: skills-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: skills-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: skills-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: skills-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: skills-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~7x per month
+- Files: **/*.test.*
+
+---
+id: skills-workflow-add-or-update-skill
+trigger: "when doing add or update skill"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Workflow Add Or Update Skill
+
+## Action
+
+Follow the add-or-update-skill workflow:
+1. Create or update SKILL.md in the skill directory.
+2. Add or update reference files (e.g., references/*.md) relevant to the skill.
+3. Add or update example files (e.g., examples/*.md, examples/*.json, examples/.env.example) if needed.
+4. Add or update scripts (e.g., scripts/*.py) for the skill.
+5. Update .claude-plugin/marketplace.json to register or rename the skill.
+6. Update README.md and agents/AGENTS.md to reflect the new or changed skill.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: skills/*/SKILL.md, skills/*/references/*.md, skills/*/examples/*
+
+---
+id: skills-workflow-sync-or-update-hf-cli-skill
+trigger: "when doing sync or update hf cli skill"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Workflow Sync Or Update Hf Cli Skill
+
+## Action
+
+Follow the sync-or-update-hf-cli-skill workflow:
+1. Update skills/hf-cli/SKILL.md (and sometimes skills/hugging-face-cli/SKILL.md).
+2. Optionally update related reference files (e.g., references/commands.md, references/examples.md).
+3. Commit with a message referencing the upstream commit or version.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: skills/hf-cli/SKILL.md, skills/hugging-face-cli/SKILL.md, skills/hugging-face-cli/references/commands.md
+
+---
+id: skills-workflow-update-skill-cli-documentation
+trigger: "when doing update skill cli documentation"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Workflow Update Skill Cli Documentation
+
+## Action
+
+Follow the update-skill-cli-documentation workflow:
+1. Edit SKILL.md to update CLI command tables or help output.
+2. Verify against upstream or source CLI implementation.
+3. Commit with a message referencing the commands or verification.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/*/SKILL.md
+
+---
+id: skills-workflow-merge-or-sync-main-branch
+trigger: "when doing merge or sync main branch"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Ygolohcysp81/skills
+---
+
+# Skills Workflow Merge Or Sync Main Branch
+
+## Action
+
+Follow the merge-or-sync-main-branch workflow:
+1. Merge main into feature/refactor branch.
+2. Update a wide set of files across skills, scripts, and metadata.
+3. Resolve conflicts and ensure consistency.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .claude-plugin/marketplace.json, .claude-plugin/plugin.json, .cursor-plugin/plugin.json
+
